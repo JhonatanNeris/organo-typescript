@@ -256,7 +256,8 @@ function App() {
     },
   ]
 
-  const [colabs, setColabs] = useState<Icolab[]>(colabsBase)
+  // const [colabs, setColabs] = useState<Icolab[]>(colabsBase)
+  const [colabs, setColabs] = useState<Icolab[]>([])
 
   const addColab = (colab: Icolab) => {
     setColabs([...colabs, colab])

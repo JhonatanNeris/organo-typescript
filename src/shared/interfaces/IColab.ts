@@ -5,4 +5,5 @@ export interface Icolab{
     image: string
     favorite: boolean
     team: string
+    date: string
 }

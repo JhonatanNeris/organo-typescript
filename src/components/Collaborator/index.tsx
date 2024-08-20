@@ -26,6 +26,7 @@ const Collaborator = ({ collaborator, color, removeCollaborator, favorite }: Col
       <div className='card-footer'>
         <h4>{collaborator.name}</h4>
         <h5>{collaborator.post}</h5>
+        <h5>{new Date(collaborator.date).toLocaleDateString()}</h5>
         <div className='favorite'>
           {collaborator.favorite
             ? <IoIosHeart color='red' size={24} onClick={() => (favorite(collaborator.id))}/>

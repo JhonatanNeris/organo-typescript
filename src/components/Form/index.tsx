@@ -30,6 +30,7 @@ const Form = (props: FormProps) => {
     const [team, setTeam] = useState("")
     const [teamName, setTeamName] = useState("")
     const [teamColor, setTeamColor] = useState("#000000")
+    const [date, setDate] = useState("")
 
     const handleSubmit = (e:  React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -39,13 +40,16 @@ const Form = (props: FormProps) => {
             image,
             team,
             favorite: false,
-            id: uuidv4()
+            id: uuidv4(),
+            date,
         })
 
         setImage("")
         setName("")
         setPost("")
+        setDate("")
         setTeam("")
+        
 
     }
     const handleSubmitTeam = (e: React.FormEvent<HTMLFormElement>) => {
@@ -84,6 +88,13 @@ const Form = (props: FormProps) => {
                     label="Imagem"
                     placeholder="Digite o endereço da imagem"
                     onchange={(valor) => setImage(valor)}
+                />
+                <Input
+                    value={date}
+                    label="Data de entrada no time"
+                    placeholder=""
+                    type="date"
+                    onchange={(valor) => setDate(valor)}
                 />
                 <ListaSuspensa 
                     value={team}   

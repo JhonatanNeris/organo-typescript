@@ -7,7 +7,7 @@ interface InputProps {
     label: string
     value: string
     onchange: (valor: string) => void
-    type?: string
+    type?: 'text' | 'password' | 'date' | 'color' | 'email' | 'number'
     obrigatorio?: boolean
 }
 
