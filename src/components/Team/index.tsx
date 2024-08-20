@@ -1,5 +1,3 @@
-import React from 'react'
-
 //Import do CSS
 import './Team.css'
 
